@@ -1,7 +1,7 @@
 [build]
-  base    = "frontend"
-  command = "npm run build"
-  publish = "frontend/dist"
+  base    = "nextech-frontend"
+  command = "npm install && npm run build"
+  publish = "nextech-frontend/dist"
 
 [[redirects]]
   from   = "/*"
