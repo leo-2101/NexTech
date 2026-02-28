@@ -1,0 +1,91 @@
+/* Estilos del Toast para NexTech Honduras */
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  min-width: 300px;
+  max-width: 400px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Variantes de color */
+.toast--success {
+  border-color: var(--color-success);
+}
+
+.toast--success .toast__icon {
+  color: var(--color-success);
+}
+
+.toast--error {
+  border-color: var(--color-error);
+}
+
+.toast--error .toast__icon {
+  color: var(--color-error);
+}
+
+.toast--warning {
+  border-color: var(--color-warning);
+}
+
+.toast--warning .toast__icon {
+  color: var(--color-warning);
+}
+
+.toast--info {
+  border-color: var(--color-info);
+}
+
+.toast--info .toast__icon {
+  color: var(--color-info);
+}
+
+/* Icono */
+.toast__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mensaje */
+.toast__message {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Botón de cerrar */
+.toast__close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.toast__close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .toast {
+    min-width: auto;
+    max-width: calc(100vw - 40px);
+  }
+}

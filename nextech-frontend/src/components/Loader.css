@@ -1,0 +1,70 @@
+/* Estilos del Loader para NexTech Honduras */
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+}
+
+/* Tamaño del loader */
+.loader--small {
+  gap: var(--spacing-sm);
+}
+
+.loader--small .loader__spinner {
+  width: 24px;
+  height: 24px;
+}
+
+.loader--medium .loader__spinner {
+  width: 40px;
+  height: 40px;
+}
+
+.loader--large .loader__spinner {
+  width: 60px;
+  height: 60px;
+}
+
+/* Spinner */
+.loader__spinner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--color-bg-tertiary);
+  border-top-color: var(--color-accent);
+  border-right-color: var(--color-accent-secondary);
+}
+
+/* Texto de carga */
+.loader__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Skeleton para tarjetas de productos */
+.product-card-skeleton {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.product-card-skeleton__content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}

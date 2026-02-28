@@ -1,0 +1,236 @@
+/* Estilos del Hero para NexTech Honduras */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3xl) 0;
+  overflow: hidden;
+}
+
+/* Fondo */
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hero__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+    var(--color-bg-primary);
+}
+
+.hero__pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Contenido */
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero__content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+  }
+}
+
+/* Texto */
+.hero__text {
+  max-width: 600px;
+}
+
+.hero__badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero__title {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+.hero__title-accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Botones */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.hero__btn--primary {
+  color: var(--color-bg-primary);
+  background: var(--color-accent);
+}
+
+.hero__btn--primary:hover {
+  background: var(--color-accent-secondary);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.hero__btn--secondary {
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 2px solid var(--color-border);
+}
+
+.hero__btn--secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Stats */
+.hero__stats {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.hero__stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Visual / Imagen */
+.hero__visual {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero__visual {
+    display: block;
+  }
+}
+
+.hero__image-container {
+  position: relative;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Elementos flotantes decorativos */
+.hero__floating {
+  position: absolute;
+  font-size: 2.5rem;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.hero__floating--1 {
+  top: 10%;
+  right: 0;
+}
+
+.hero__floating--2 {
+  bottom: 20%;
+  left: -20px;
+}
+
+.hero__floating--3 {
+  top: 40%;
+  right: -20px;
+}
+
+/* Responsive mobile */
+@media (max-width: 1023px) {
+  .hero {
+    min-height: auto;
+    padding: 120px 0 var(--spacing-3xl);
+  }
+  
+  .hero__stats {
+    justify-content: center;
+  }
+  
+  .hero__actions {
+    justify-content: center;
+  }
+  
+  .hero__text {
+    text-align: center;
+  }
+}
