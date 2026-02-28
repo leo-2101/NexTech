@@ -7,7 +7,7 @@ import axios from 'axios'
 
 // Crear instancia de axios
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000/api/v1',
+  baseURL: 'https://nextech-production.up.railway.app/api/v1',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'
